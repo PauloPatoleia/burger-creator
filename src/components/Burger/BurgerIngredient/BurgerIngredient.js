@@ -3,42 +3,42 @@ import Classes from './BurgerIngredient.css'
 import PropTypes from 'prop-types';
 
 class BurgerIngredient extends Component {
-    render () {
-            let ingredient = null
-    
-            switch (this.props.type) {
-                case ('bread-bottom'):  ingredient = <div className={Classes.BreadBottom}> </div>
+    render() {
+        let ingredient = null
+
+        switch (this.props.type) {
+            case ('bread-bottom'): ingredient = <div className={Classes.BreadBottom}> </div>
                 break;
-                case ('bread-top'): ingredient = (
-                    <div className={Classes.BreadTop}>
-                        <div className={Classes.Seeds1}></div>
-                        <div className={Classes.Seeds2}></div>
-                    </div>
-                );
+            case ('bread-top'): ingredient = (
+                <div className={Classes.BreadTop}>
+                    <div className={Classes.Seeds1}></div>
+                    <div className={Classes.Seeds2}></div>
+                </div>
+            );
                 break;
-        
-                case ('meat'): 
+
+            case ('meat'):
                 ingredient = <div className={Classes.Meat}></div>
                 break;
-        
-                case ('cheese'): 
+
+            case ('cheese'):
                 ingredient = <div className={Classes.Cheese}></div>
                 break;
-        
-                case ('bacon'): 
+
+            case ('bacon'):
                 ingredient = <div className={Classes.Bacon}></div>
                 break;
-        
-                case ('salad'): 
+
+            case ('salad'):
                 ingredient = <div className={Classes.Salad}></div>
                 break;
-        
-                default: 
-                    ingredient = null
-                
-            }
-            return ingredient
+
+            default:
+                ingredient = null
+
         }
+        return ingredient
+    }
 }
 
 BurgerIngredient.propTypes = {
